@@ -1,3 +1,4 @@
+import os
 import random
 import streamlit as st
 
@@ -24,7 +25,6 @@ st.markdown(
         background: transparent;
     }
 
-    /* FIX: readable info box */
     div[data-testid="stAlert"] {
         background: rgba(0, 0, 0, 0.45);
         border: 1px solid rgba(255, 255, 255, 0.4);
@@ -51,7 +51,6 @@ st.markdown(
         to   {opacity: 1; transform: translateY(0);}
     }
 
-    /* Meme style */
     .meme {
         text-align: center;
         padding: 20px 10px;
@@ -153,6 +152,15 @@ elif page == "🎮 Game":
 # =====================================================
 elif page == "😂 Coding Meme":
     st.header("😂 Coding Memes")
+
+    # Your meme video
+    VIDEO_FILE = "ssstik.io_1795686037703.mp4"
+    if os.path.exists(VIDEO_FILE):
+        st.video(VIDEO_FILE)
+    else:
+        st.warning(f"Video '{VIDEO_FILE}' not found. Upload it to GitHub next to app.py.")
+
+    st.divider()
 
     memes = [
         ("It works on my machine", "🤷‍♂️", "Then we'll ship your machine"),
