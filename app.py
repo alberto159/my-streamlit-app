@@ -119,6 +119,22 @@ st.markdown(
         to   {opacity: 1; transform: translateY(0);}
     }
 
+    /* NEW: intro card */
+    .intro-box {
+        padding: 18px 16px;
+        margin: 15px 0;
+        background: #1f1f1f;
+        border: 3px solid #7d7d7d;
+        border-left: 6px solid #5b8731;
+        border-radius: 0;
+    }
+    .intro-box p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin: 0 0 14px 0;
+    }
+    .intro-box p:last-child { margin-bottom: 0; }
+
     .meme {
         text-align: center;
         padding: 20px 10px;
@@ -166,6 +182,18 @@ if page == "🏠 About Me":
     st.header("John Albert Z. Bacomo")
     st.image("IMG_20261126_093653.jpg", width=180)
     st.write("Welcome to my Streamlit application!")
+
+    # NEW: your introduction
+    st.markdown(
+        """
+        <div class="intro-box">
+            <p>👋 Hi guys, welcome to the app! As you can see at the top of my profile, my name is <b>John Albert Z. Bacomo</b>.</p>
+            <p>🎓 Currently, I'm a second-year irregular college student 🥲 pursuing <b>Mechanical Engineering (BSME)</b> at <b>North Eastern Mindanao State University (NEMSU)</b>.</p>
+            <p>⚙️ I chose Mechanical Engineering because I consider it one of the most versatile branches of engineering, offering a broader scope than many other disciplines. I'm also curious about how machines work and what mechanical work entails, as well as how programming and coding fit into what we work on today.</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
     st.divider()
     st.subheader("About Me")
