@@ -2,7 +2,7 @@ import streamlit as st
 
 
 st.header("John Albert Z. Bacomo")
-st.image("IMG_6032.HEIC", width=180)
+st.image("IMG_20261126_093653.jpg", width=180)
 st.write("Welcome to my Streamlit application!")
 
 st.divider()
